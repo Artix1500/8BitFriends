@@ -5,7 +5,9 @@ exports[`Header Component renders correctly 1`] = `
   style={
     Object {
       "backgroundColor": "indigo",
+      "flexDirection": "row",
       "height": 60,
+      "justifyContent": "space-between",
       "padding": 15,
     }
   }
@@ -29,7 +31,9 @@ exports[`Header Component renders title from props 1`] = `
   style={
     Object {
       "backgroundColor": "indigo",
+      "flexDirection": "row",
       "height": 60,
+      "justifyContent": "space-between",
       "padding": 15,
     }
   }
