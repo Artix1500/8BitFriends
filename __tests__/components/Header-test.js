@@ -11,6 +11,12 @@ import renderer from 'react-test-renderer';
 
 describe('Header Component', () => {
   it('renders correctly', () => {
-    renderer.create(<Header />);
+    const tree = renderer.create(<Header />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders title from props', () => {
+    const tree = renderer.create(<Header title={'Example'} />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });

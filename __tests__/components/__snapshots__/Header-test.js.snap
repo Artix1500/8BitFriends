@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "indigo",
+      "height": 60,
+      "padding": 15,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 23,
+        "textAlign": "center",
+      }
+    }
+  >
+    8BitFriends
+  </Text>
+</View>
+`;
+
+exports[`Header Component renders title from props 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "indigo",
+      "height": 60,
+      "padding": 15,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "white",
+        "fontSize": 23,
+        "textAlign": "center",
+      }
+    }
+  >
+    Example
+  </Text>
+</View>
+`;
