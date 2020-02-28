@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import Header from '../components/Header';
+import ListOfUsers from '../components/ListOfUsers';
 import {SearchBar} from 'react-native-elements';
 import axios from 'axios';
 
@@ -31,7 +32,7 @@ const Discover = ({navigation}) => {
         },
         {
           headers: {
-            Authorization: 'bearer 388067e911d6699f259e055b71824dd01e0157f0',
+            Authorization: 'bearer bd57d01d40f5a3cd0ee735f5a91466249891cf22',
           },
         },
       );
@@ -51,7 +52,7 @@ const Discover = ({navigation}) => {
         value={search}
       />
 
-      <Text>debug search: {search}</Text>
+      <ListOfUsers users={data} />
     </View>
   );
 };
