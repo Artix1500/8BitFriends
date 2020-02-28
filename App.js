@@ -1,20 +1,21 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
-import Header from './components/Header';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
+import Discover from './views/Discover.js';
+import Login from './views/Login.js';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Header title="8BitFriends" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Discover" component={Discover} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    paddingTop: 50,
-    flex: 1,
-  },
-});
 
 export default App;
