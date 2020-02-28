@@ -7,10 +7,19 @@ const Login = ({navigation}) => {
     <View style={styles.container}>
       <Header title="8BitFriends" />
 
-      <Button
-        title="Go to Discover"
-        onPress={() => navigation.navigate('Discover')}
-      />
+      <View style={styles.buttonView}>
+        <Button
+          title="Sign in"
+          onPress={() => navigation.navigate('Discover')}
+        />
+      </View>
+
+      <View style={styles.buttonView}>
+        <Button
+          title="Sign up"
+          onPress={() => navigation.navigate('Discover')}
+        />
+      </View>
     </View>
   );
 };
@@ -18,6 +27,9 @@ const Login = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  buttonView: {
+    paddingTop: 30,
   },
 });
 
