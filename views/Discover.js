@@ -2,10 +2,10 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import Header from '../components/Header';
 
-const Discover = () => {
+const Discover = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Header title="8BitFriends" />
+      <Header title="8BitFriends" logout={true} navigation={navigation} />
     </View>
   );
 };
