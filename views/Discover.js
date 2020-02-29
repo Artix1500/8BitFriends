@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import ListOfUsers from '../components/ListOfUsers';
 import {SearchBar} from 'react-native-elements';
 import axios from 'axios';
+import {OAuthKey} from 'react-native-dotenv';
 
 const Discover = ({navigation}) => {
   let [search, setSearch] = useState('');
@@ -37,7 +38,7 @@ const Discover = ({navigation}) => {
         },
         {
           headers: {
-            Authorization: 'bearer 0e2f667534e89ae6ceb9bf4e40c433ae0adf9a8d',
+            Authorization: `bearer ${OAuthKey}`,
           },
         },
       );
