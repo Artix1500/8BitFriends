@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {ListItem} from 'react-native-elements';
 
-const ListOfUsers = ({users}) => {
+const ListOfUsers = ({users, navigation}) => {
   return (
     <View>
       {users.map((user, i) => (
@@ -15,6 +15,7 @@ const ListOfUsers = ({users}) => {
             user.repositories ? user.repositories.totalCount : 0
           }`}
           rightTitleStyle={styles.rightTitle}
+          onPress={() => navigation.navigate('User', {user})}
         />
       ))}
     </View>

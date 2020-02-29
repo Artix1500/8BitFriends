@@ -26,6 +26,7 @@ const Discover = ({navigation}) => {
                   name
                   login
                   avatarUrl
+                  location
                   repositories {
                     totalCount
                   }
@@ -36,7 +37,7 @@ const Discover = ({navigation}) => {
         },
         {
           headers: {
-            Authorization: 'bearer d69f1f25b67078b3265ec59c07d481af947f2653',
+            Authorization: 'bearer 0e2f667534e89ae6ceb9bf4e40c433ae0adf9a8d',
           },
         },
       );
@@ -56,7 +57,7 @@ const Discover = ({navigation}) => {
         value={search}
       />
 
-      <ListOfUsers users={data} />
+      <ListOfUsers users={data} navigation={navigation} />
     </View>
   );
 };
