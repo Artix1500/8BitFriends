@@ -7,11 +7,12 @@ import axios from 'axios';
 import {OAuthKey} from 'react-native-dotenv';
 
 const Discover = ({navigation}) => {
-  let [search, setSearch] = useState('');
+  let [search, setSearch] = useState({value: '', timestamp: new Date()});
   let [data, setData] = useState([]);
 
   const handleSearch = async value => {
-    setSearch(value);
+    let timestamp = new Date();
+    setSearch({value: value, timestamp: timestamp});
 
     // search
     try {
@@ -42,7 +43,9 @@ const Discover = ({navigation}) => {
           },
         },
       );
-      setData(res.data.data.search.nodes);
+      if (timestamp - search.timestamp > 0) {
+        setData(res.data.data.search.nodes);
+      }
     } catch (error) {
       console.log('ERROR');
     }
@@ -55,7 +58,7 @@ const Discover = ({navigation}) => {
         lightTheme={true}
         placeholder="Type Here..."
         onChangeText={handleSearch}
-        value={search}
+        value={search.value}
       />
 
       <ListOfUsers users={data} navigation={navigation} />
