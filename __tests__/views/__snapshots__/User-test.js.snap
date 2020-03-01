@@ -1,0 +1,275 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User view Search value is empty after mount 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "indigo",
+        "flexDirection": "row",
+        "height": 60,
+        "justifyContent": "space-between",
+        "padding": 15,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 23,
+          "textAlign": "center",
+        }
+      }
+    >
+      8BitFriends
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "paddingTop": 30,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 75,
+          "height": 150,
+          "width": 150,
+        }
+      }
+      theme={
+        Object {
+          "colors": Object {
+            "disabled": "hsl(208, 8%, 90%)",
+            "divider": "#bcbbc1",
+            "error": "#ff190c",
+            "grey0": "#393e42",
+            "grey1": "#43484d",
+            "grey2": "#5e6977",
+            "grey3": "#86939e",
+            "grey4": "#bdc6cf",
+            "grey5": "#e1e8ee",
+            "greyOutline": "#bbb",
+            "platform": Object {
+              "android": Object {
+                "error": "#f44336",
+                "primary": "#2196f3",
+                "secondary": "#9C27B0",
+                "success": "#4caf50",
+                "warning": "#ffeb3b",
+              },
+              "ios": Object {
+                "error": "#ff3b30",
+                "primary": "#007aff",
+                "secondary": "#5856d6",
+                "success": "#4cd964",
+                "warning": "#ffcc00",
+              },
+            },
+            "primary": "#2089dc",
+            "searchBg": "#303337",
+            "secondary": "#8F0CE8",
+            "success": "#52c41a",
+            "warning": "#faad14",
+          },
+        }
+      }
+    >
+      <View
+        accessibilityIgnoresInvertColors={true}
+        style={
+          Object {
+            "backgroundColor": "#bdbdbd",
+            "borderRadius": 75,
+            "flex": 1,
+            "overflow": "hidden",
+            "position": "relative",
+          }
+        }
+      >
+        <Image
+          onLoad={[Function]}
+          source={
+            Object {
+              "uri": "https://avatars2.githubusercontent.com/u/38567097?v=4",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "height": null,
+                "width": null,
+              },
+            ]
+          }
+          testID="RNE__Image"
+          theme={
+            Object {
+              "colors": Object {
+                "disabled": "hsl(208, 8%, 90%)",
+                "divider": "#bcbbc1",
+                "error": "#ff190c",
+                "grey0": "#393e42",
+                "grey1": "#43484d",
+                "grey2": "#5e6977",
+                "grey3": "#86939e",
+                "grey4": "#bdc6cf",
+                "grey5": "#e1e8ee",
+                "greyOutline": "#bbb",
+                "platform": Object {
+                  "android": Object {
+                    "error": "#f44336",
+                    "primary": "#2196f3",
+                    "secondary": "#9C27B0",
+                    "success": "#4caf50",
+                    "warning": "#ffeb3b",
+                  },
+                  "ios": Object {
+                    "error": "#ff3b30",
+                    "primary": "#007aff",
+                    "secondary": "#5856d6",
+                    "success": "#4cd964",
+                    "warning": "#ffcc00",
+                  },
+                },
+                "primary": "#2089dc",
+                "searchBg": "#303337",
+                "secondary": "#8F0CE8",
+                "success": "#52c41a",
+                "warning": "#faad14",
+              },
+            }
+          }
+        />
+        <View
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+          pointerEvents="none"
+          style={
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "opacity": 1,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#bdbdbd",
+                "flex": 1,
+                "height": null,
+                "justifyContent": "center",
+                "width": null,
+              }
+            }
+            testID="RNE__Image__placeholder"
+          >
+            <Text
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "color": "#ffffff",
+                  "fontSize": 75,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Artix1500
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "height": null,
+              "width": null,
+            }
+          }
+        />
+      </View>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "grey",
+          "fontSize": 12,
+          "marginTop": 20,
+        }
+      }
+    >
+      login:
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 20,
+        }
+      }
+    >
+      Artix1500
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "grey",
+          "fontSize": 12,
+          "marginTop": 20,
+        }
+      }
+    >
+      name:
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 20,
+        }
+      }
+    >
+      Artur Haczek
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "grey",
+          "fontSize": 12,
+          "marginTop": 20,
+        }
+      }
+    >
+      location:
+    </Text>
+    <Text
+      style={
+        Object {
+          "fontSize": 20,
+        }
+      }
+    />
+  </View>
+</View>
+`;
