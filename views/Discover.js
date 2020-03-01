@@ -46,9 +46,8 @@ class Discover extends React.Component {
           },
         },
       );
-      if (timestamp - this.state.search.timestamp > 0) {
+      if (timestamp - this.state.search.timestamp >= 0) {
         this.setState({data: res.data.data.search.nodes});
-        return res.data.data.search.nodes;
       }
     } catch (error) {
       console.log('ERROR');
