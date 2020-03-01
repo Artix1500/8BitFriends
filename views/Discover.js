@@ -19,33 +19,7 @@ class Discover extends React.Component {
 
     // search
     try {
-      let res = await axios.post(
-        'https://api.github.com/graphql',
-        {
-          query: `query { 
-            search(first: 10, query: "${value}", type: USER){
-              userCount
-              nodes{
-                __typename
-                ... on User {
-                  name
-                  login
-                  avatarUrl
-                  location
-                  repositories {
-                    totalCount
-                  }
-                }
-              }
-            } 
-          }`,
-        },
-        {
-          headers: {
-            Authorization: `bearer ${OAuthKey}`,
-          },
-        },
-      );
+      let res = await this.callApi(value);
       if (timestamp - this.state.search.timestamp >= 0) {
         this.setState({data: res.data.data.search.nodes});
       }
@@ -53,6 +27,36 @@ class Discover extends React.Component {
       console.log('ERROR');
     }
   };
+
+  callApi = async value =>
+    axios.post(
+      'https://api.github.com/graphql',
+      {
+        query: `query { 
+        search(first: 10, query: "${value}", type: USER){
+          userCount
+          nodes{
+            __typename
+            ... on User {
+              name
+              login
+              avatarUrl
+              location
+              repositories {
+                totalCount
+              }
+            }
+          }
+        } 
+      }`,
+      },
+      {
+        headers: {
+          Authorization: `bearer ${OAuthKey}`,
+        },
+      },
+    );
+
   render() {
     return (
       <View style={styles.container}>
