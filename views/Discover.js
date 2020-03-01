@@ -6,13 +6,16 @@ import {SearchBar} from 'react-native-elements';
 import axios from 'axios';
 import {OAuthKey} from 'react-native-dotenv';
 
-const Discover = ({navigation}) => {
-  let [search, setSearch] = useState({value: '', timestamp: new Date()});
-  let [data, setData] = useState([]);
+// const Discover = ({navigation}) =>
+class Discover extends React.Component {
+  state = {
+    search: {value: '', timestamp: new Date()},
+    data: [],
+  };
 
-  const handleSearch = async value => {
+  handleSearch = async value => {
     let timestamp = new Date();
-    setSearch({value: value, timestamp: timestamp});
+    this.setState({search: {value: value, timestamp: timestamp}});
 
     // search
     try {
@@ -43,28 +46,38 @@ const Discover = ({navigation}) => {
           },
         },
       );
-      if (timestamp - search.timestamp > 0) {
-        setData(res.data.data.search.nodes);
+      if (timestamp - this.state.search.timestamp > 0) {
+        this.setState({data: res.data.data.search.nodes});
+        return res.data.data.search.nodes;
       }
     } catch (error) {
       console.log('ERROR');
     }
   };
-  return (
-    <View style={styles.container}>
-      <Header title="8BitFriends" logout={true} navigation={navigation} />
+  render() {
+    return (
+      <View style={styles.container}>
+        <Header
+          title="8BitFriends"
+          logout={true}
+          navigation={this.props.navigation}
+        />
 
-      <SearchBar
-        lightTheme={true}
-        placeholder="Type Here..."
-        onChangeText={handleSearch}
-        value={search.value}
-      />
+        <SearchBar
+          lightTheme={true}
+          placeholder="Type Here..."
+          onChangeText={this.handleSearch}
+          value={this.state.search.value}
+        />
 
-      <ListOfUsers users={data} navigation={navigation} />
-    </View>
-  );
-};
+        <ListOfUsers
+          users={this.state.data}
+          navigation={this.props.navigation}
+        />
+      </View>
+    );
+  }
+}
 
 const styles = StyleSheet.create({
   container: {
