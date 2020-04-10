@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    height: 60,
+    height: 65,
     padding: 15,
     backgroundColor: 'indigo',
   },
